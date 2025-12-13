@@ -2,7 +2,15 @@ import pandas as pd
 import numpy as np
 import pickle as pk
 import streamlit as st
-model=pk.load(open('model.pkl','rb'))
+import pickle as pk
+import os
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+model_path = os.path.join(BASE_DIR, "model.pkl")
+
+with open(model_path, "rb") as file:
+    model = pk.load(file)
+
 st.header("Car Price Prdiction Ml Model")
 cars_data=pd.read_csv('Cardetails.csv')
 def get_brand_name(car_name):
@@ -32,4 +40,5 @@ if st.button("Predict"):
        'Jaguar', 'Land', 'MG', 'Volvo', 'Daewoo', 'Kia', 'Fiat', 'Force',
        'Ambassador', 'Ashok', 'Isuzu', 'Opel'],[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31],inplace=True)
   car_price=model.predict(input_data)
+
   st.markdown("Car_Price->"+str(car_price[0]))
