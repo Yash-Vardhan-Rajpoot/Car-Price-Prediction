@@ -12,7 +12,9 @@ with open(model_path, "rb") as file:
     model = pk.load(file)
 
 st.header("Car Price Prdiction Ml Model")
-cars_data=pd.read_csv('Cardetails.csv')
+csv_path = os.path.join(BASE_DIR, "Cardetails.csv")
+cars_data = pd.read_csv(csv_path)
+
 def get_brand_name(car_name):
   car_name=car_name.split(' ')[0]
   return car_name.strip()
@@ -42,3 +44,4 @@ if st.button("Predict"):
   car_price=model.predict(input_data)
 
   st.markdown("Car_Price->"+str(car_price[0]))
+
