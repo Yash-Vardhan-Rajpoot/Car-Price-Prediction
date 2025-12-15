@@ -7,7 +7,7 @@ The application is built using Streamlit and deployed on Render.
 ---
 
 ## 🌐 Live Demo
-👉 Live App: https://car-price-prediction-2-7cb6.onrender.com
+👉 Live App: https://car-price-prediction-3n4m.onrender.com
 
 Note: The app may take a few seconds to load on first access because it is hosted on Render's free tier.
 
