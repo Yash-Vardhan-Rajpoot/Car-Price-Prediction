@@ -11,7 +11,7 @@ model_path = os.path.join(BASE_DIR, "model.pkl")
 with open(model_path, "rb") as file:
     model = pk.load(file)
 
-st.header("Car Price Prdiction Ml Model")
+st.header("Car Price Prediction Ml Model:-")
 csv_path = os.path.join(BASE_DIR, "Cardetails.csv")
 cars_data = pd.read_csv(csv_path)
 
@@ -44,4 +44,5 @@ if st.button("Predict"):
   car_price=model.predict(input_data)
 
   st.markdown("Car_Price->"+str(car_price[0]))
+
 
