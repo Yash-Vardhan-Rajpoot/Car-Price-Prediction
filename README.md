@@ -51,7 +51,7 @@ Car_prediction/
 ## ▶️ How to Run Locally
 
 1. Clone the repository:
-   git clone https://github.com/Lisha-Rani/Car-Price-Prediction.git
+   git clone https://github.com/Yash-Vardhan-Rajpoot/Car-Price-Prediction
    cd Car_prediction
 
 2. Install dependencies:
